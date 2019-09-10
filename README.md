@@ -21,6 +21,8 @@ La segunda etapa recorre la matriz en dirección opuesta, comenzando desde el el
 El ordenamiento por inserción es un algoritmo basado en la comparación de elementos. Es estable y tiene una complejidad asintótica cuadrática O (n ^ {2}). La versión generalizada de este algoritmo es la ordenación de Shell, que es un ordenamiento de inserción con un incremento decreciente.
 Un elemento se ordena trivialmente.Elije el elemento junto a la secuencia ya ordenada y lo insérta en el lugar correcto: mueve cada elemento de la secuencia ya ordenada, que tiene un valor más alto que el elemento que se está ordenando, un lugar a la derecha, que coloca el elemento en el espacio (lugar correcto dentro de la secuencia). Mientras el conjunto contenga elementos desordenados, se volverpa al paso dos.
 
+![image](https://user-images.githubusercontent.com/6539267/64629760-a5bb6900-d3a8-11e9-882c-c5ee106b90c3.png)
+
 ![image](https://user-images.githubusercontent.com/6539267/64629676-815f8c80-d3a8-11e9-994a-8452bd3498f2.png)
 
 
