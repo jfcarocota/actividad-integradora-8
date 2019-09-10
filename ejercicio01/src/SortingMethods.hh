@@ -13,6 +13,7 @@ public:
     
     static const std::vector<int> BubbleSort(std::vector<int>);
     static const std::vector<int> CocktailSort(std::vector<int>);
+    static const std::vector<int> InsertionSort(std::vector<int>);
 };
 
 SortingMethods::SortingMethods(/* args */)
@@ -72,6 +73,23 @@ const std::vector<int> SortingMethods::CocktailSort(std::vector<int> v)
 
         ++start; 
     } 
+    return v;
+}
+
+const std::vector<int> SortingMethods::InsertionSort(std::vector<int> v)
+{
+    for (int i = 0; i < v.size() - 1; i++) 
+    {
+        int j = i + 1;
+        int tmp = v[j];
+
+        while (j > 0 && tmp > v[j-1]) 
+        {
+            v[j] = v[j-1];
+            j--;
+        }
+        v[j] = tmp;
+    }
     return v;
 }
 
