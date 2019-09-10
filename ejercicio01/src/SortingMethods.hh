@@ -24,9 +24,9 @@ SortingMethods::~SortingMethods()
 const std::vector<int> SortingMethods::BubbleSort(std::vector<int> v)
 {
     int aux = 0;
-    for (int i = 0; i < v.size(); i++)
+    for (int i = 0; i < v.size() - 1; i++)
     {
-        for (int j = 0; j < v.size(); j++)
+        for (int j = 0; j < v.size() - i - 1; j++)
         {
             if(v[j] > v[j + 1])
             {
