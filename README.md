@@ -9,14 +9,20 @@ Bubble Sort a menudo se enseña a programadores novatos en cursos introductorios
 # Cocktail Sort o bubblesort bidireccional
 
 Cocktail Sort es una variación de Bubble Sort. El algoritmo de clasificación de burbujas siempre atraviesa elementos desde la izquierda y mueve el elemento más grande a su posición correcta en la primera iteración y el segundo más grande en la segunda iteración, y así sucesivamente. Cocktail Sort atraviesa una matriz dada en ambas direcciones alternativamente, por eso se llama bidireccional.
-
 La primera etapa recorre la matriz de izquierda a derecha, al igual que el Bubble Sort. Durante el ciclo, los elementos adyacentes se comparan y si el valor de la izquierda es mayor que el valor de la derecha, los valores se intercambian. Al final de la primera iteración, el mayor número residirá al final de la matriz.
-
 La segunda etapa recorre la matriz en dirección opuesta, comenzando desde el elemento justo antes del elemento ordenado más recientemente, y volviendo al inicio de la matriz. Aquí también, los elementos adyacentes se comparan y se intercambian si es necesario.
 
 ![image](https://user-images.githubusercontent.com/6539267/64586399-00c17180-d351-11e9-992c-5f9caa23cb62.png)
 
 ![image](https://user-images.githubusercontent.com/6539267/64586471-37978780-d351-11e9-8143-b8d3f32b1573.png)
+
+# Insertion Sort
+
+El ordenamiento por inserción es un algoritmo basado en la comparación de elementos. Es estable y tiene una complejidad asintótica cuadrática O (n ^ {2}). La versión generalizada de este algoritmo es la ordenación de Shell, que es un ordenamiento de inserción con un incremento decreciente.
+Un elemento se ordena trivialmente.Elije el elemento junto a la secuencia ya ordenada y lo insérta en el lugar correcto: mueve cada elemento de la secuencia ya ordenada, que tiene un valor más alto que el elemento que se está ordenando, un lugar a la derecha, que coloca el elemento en el espacio (lugar correcto dentro de la secuencia). Mientras el conjunto contenga elementos desordenados, se volverpa al paso dos.
+
+![image](https://user-images.githubusercontent.com/6539267/64629676-815f8c80-d3a8-11e9-994a-8452bd3498f2.png)
+
 
 # Referencias
 Shaffer, Clifford A .. Estructuras de datos y análisis de algoritmos en C ++, tercera edición (Dover Books on Computer Science). Publicaciones de Dover. Edición de Kindle.
