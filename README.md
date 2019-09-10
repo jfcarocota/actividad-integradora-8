@@ -14,5 +14,9 @@ La primera etapa recorre la matriz de izquierda a derecha, al igual que el Bubbl
 
 La segunda etapa recorre la matriz en dirección opuesta, comenzando desde el elemento justo antes del elemento ordenado más recientemente, y volviendo al inicio de la matriz. Aquí también, los elementos adyacentes se comparan y se intercambian si es necesario.
 
+![image](https://user-images.githubusercontent.com/6539267/64586399-00c17180-d351-11e9-992c-5f9caa23cb62.png)
+
+![image](https://user-images.githubusercontent.com/6539267/64586471-37978780-d351-11e9-8143-b8d3f32b1573.png)
+
 # Referencias
 Shaffer, Clifford A .. Estructuras de datos y análisis de algoritmos en C ++, tercera edición (Dover Books on Computer Science). Publicaciones de Dover. Edición de Kindle.
