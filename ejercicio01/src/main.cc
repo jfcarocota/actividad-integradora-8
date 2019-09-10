@@ -7,6 +7,8 @@ int main()
     std::vector<int> vbubblesorted = SortingMethods::BubbleSort(v);
     std::vector<int> vcocktrailsorted = SortingMethods::CocktailSort(v);
     std::vector<int> vinsertionsorted = SortingMethods::InsertionSort(v);
+    std::vector<int> vbucketsorted = SortingMethods::BucketSort(v);
+
 
     std::cout << "Bubble Sort: " << std::endl;
     for (int i = 0; i < vbubblesorted.size(); i++)
@@ -25,6 +27,12 @@ int main()
     {
         std::cout << vinsertionsorted[i] << std::endl;
     }
+    std::cout << "Bucket Sort: " << std::endl;
+    for (int i = 0; i < vinsertionsorted.size(); i++)
+    {
+        std::cout << vbucketsorted[i] << std::endl;
+    }
+    
     
     std::getchar();
 }
