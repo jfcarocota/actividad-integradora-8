@@ -15,7 +15,7 @@ public:
     static const std::vector<int> BubbleSort(std::vector<int>);
     static const std::vector<int> CocktailSort(std::vector<int>);
     static const std::vector<int> InsertionSort(std::vector<int>);
-    static const std::vector<int> BucketSort(std::vector<int>);
+    static const int* BucketSort(int*);
 };
 
 SortingMethods::SortingMethods(/* args */)
@@ -95,30 +95,24 @@ const std::vector<int> SortingMethods::InsertionSort(std::vector<int> v)
     return v;
 }
 
-const std::vector<int> SortingMethods::BucketSort(std::vector<int> v)
-{
-    int n = v.size();
-    // 1) Create n empty buckets 
-    std::vector<float> b[n]; 
-     
-    // 2) Put array elements in different buckets 
-    for (int i=0; i<n; i++) 
-    { 
-       int bi = n*v[i]; // Index in bucket 
-       b[bi].push_back(v[i]); 
-    } 
-  
-    // 3) Sort individual buckets 
-    for (int i=0; i<n; i++) 
-       std::sort(b[i].begin(), b[i].end()); 
-  
-    // 4) Concatenate all buckets into arr[] 
-    int index = 0; 
-    for (int i = 0; i < n; i++) 
-        for (int j = 0; j < b[i].size(); j++) 
-          v[index++] = b[i][j]; 
-
-    return v;
-}
+const int* SortingMethods::BucketSort(int *array) 
+{ 
+    int size = sizeof(array)/sizeof(array[0]);
+    std::vector<int> bucket[size];
+   for(int i = 0; i<size; i++)  {          //put elements into different buckets
+      bucket[int(size*array[i])].push_back(array[i]);
+   }
+   for(int i = 0; i<size; i++) {
+      std::sort(bucket[i].begin(), bucket[i].end());       //sort individual vectors
+   }
+   int index = 0;
+   for(int i = 0; i<size; i++) {
+      while(!bucket[i].empty()) {
+         array[index++] = *(bucket[i].begin());
+         bucket[i].erase(bucket[i].begin());
+      }
+   }
+    return array;
+} 
 
 
