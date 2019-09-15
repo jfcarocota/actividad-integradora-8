@@ -55,6 +55,15 @@ El ordenamiento por mezcla es un algoritmo recursivo que divide continuamente un
 
 ![image](https://user-images.githubusercontent.com/6539267/64918157-4e721b80-d74f-11e9-932f-4aa9c7ac07b8.png)
 
+## Bibary tree sort 
+
+<p align="justify">
+El ordenamiento con árbol binario es un algoritmo de ordenamiento, el cual ordena sus elementos haciendo uso de un árbol binario de búsqueda. Se basa en ir construyendo poco a poco el árbol binario introduciendo cada uno de los elementos, los cuales quedarán ya ordenados. Después, se obtiene la lista de los elementos ordenados recorriendo el árbol en inorden.
+Cada elemento del árbol se relaciona con cero o más elementos a quienes llama hijos. Si el árbol no está vacío, hay un único elemento al cual se llama raíz y que no tiene padre (predecesor), es decir, no es hijo de ningún otro. Todo otro elemento del árbol posee un único padre y es un descendiente (hijo del hijo del hijo, etc.) de la raíz.
+<p>
+
+![image](https://user-images.githubusercontent.com/6539267/64923610-15a66680-d790-11e9-8528-d12b3658f6c0.png)
+
 ## Analisis
 
 ![image](https://user-images.githubusercontent.com/6539267/64917478-87a58e00-d745-11e9-92db-a549a342d8f8.png)
