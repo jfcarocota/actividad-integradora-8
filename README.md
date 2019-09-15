@@ -34,3 +34,6 @@ El ordenamiento por casilleros (bucket sort en inglés) es un algoritmo de orden
 
 ## Referencias
 Shaffer, Clifford A .. Estructuras de datos y análisis de algoritmos en C ++, tercera edición (Dover Books on Computer Science). Publicaciones de Dover. Edición de Kindle.
+Serna C., Andrés F. (2010). Bucket Sort, Algoritmos de ordenamiento. Obtenido en: https://upcanalisisalgoritmos.wikispaces.com/file/view/Bucket+Sort+AO.pdf
+
+GeeksforGeeks.,(2015). Pigeonhole Sort, Noida Uttar Pradesh. India. Algoritmos de ordenamiento, Obtenido en: http://www.geeksforgeeks.org/about/contact-us/.
