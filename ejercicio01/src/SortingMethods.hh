@@ -16,6 +16,7 @@ public:
     static const std::vector<int> CocktailSort(std::vector<int>);
     static const std::vector<int> InsertionSort(std::vector<int>);
     static const void BucketSort(float[], int); 
+    static const std::vector<int> CountSort(std::vector<int>);
 };
 
 SortingMethods::SortingMethods(/* args */)
@@ -97,25 +98,43 @@ const std::vector<int> SortingMethods::InsertionSort(std::vector<int> v)
 
 const void SortingMethods::BucketSort(float arr[], int n) 
 { 
-    // 1) Create n empty buckets 
     std::vector<float> b[n]; 
      
-    // 2) Put array elements in different buckets 
     for (int i=0; i<n; i++) 
     { 
        int bi = n*arr[i]; // Index in bucket 
        b[bi].push_back(arr[i]); 
     } 
   
-    // 3) Sort individual buckets 
     for (int i=0; i<n; i++) 
        std::sort(b[i].begin(), b[i].end()); 
   
-    // 4) Concatenate all buckets into arr[] 
     int index = 0; 
     for (int i = 0; i < n; i++) 
         for (int j = 0; j < b[i].size(); j++) 
           arr[index++] = b[i][j]; 
 } 
 
-
+const std::vector<int> SortingMethods::CountSort(std::vector<int> arr) 
+{
+    int max = *max_element(arr.begin(), arr.end()); 
+    int min = *min_element(arr.begin(), arr.end()); 
+    int range = max - min + 1; 
+    
+    std::vector<int> count(range), output(arr.size()); 
+    for(int i = 0; i < arr.size(); i++) 
+        count[arr[i]-min]++; 
+        
+    for(int i = 1; i < count.size(); i++) 
+        count[i] += count[i-1]; 
+    
+    for(int i = arr.size()-1; i >= 0; i--) 
+    {  
+        output[ count[arr[i]-min] -1 ] = arr[i];  
+            count[arr[i]-min]--;  
+    } 
+    
+    for(int i=0; i < arr.size(); i++) 
+            arr[i] = output[i]; 
+    return arr;
+}

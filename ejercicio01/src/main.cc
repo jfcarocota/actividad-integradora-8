@@ -1,16 +1,21 @@
 #include <iostream>
 #include "SortingMethods.hh"
 
+
+
+
 int main()
 {
     std::vector<int> v = {7, 8, 5, 2, 4, 1, 9, 3, 6};
     int fv[] = {7, 8, 5, 2, 4, 1, 9, 3, 6};
+    std::vector<int> arrayv = {-5, -10, 0, -3, 8, 5, -1, 10};
+
     std::vector<int> vbubblesorted = SortingMethods::BubbleSort(v);
     std::vector<int> vcocktrailsorted = SortingMethods::CocktailSort(v);
     std::vector<int> vinsertionsorted = SortingMethods::InsertionSort(v);
     float arr[] = {0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434}; 
     int n = sizeof(arr)/sizeof(arr[0]); 
-
+    std::vector<int> vcountsorted = SortingMethods::CountSort(arrayv);
 
     std::cout << "Bubble Sort: " << std::endl;
     for (int i = 0; i < vbubblesorted.size(); i++)
@@ -32,8 +37,18 @@ int main()
     std::cout << "\nBucket Sort: " << std::endl;
     SortingMethods::BucketSort(arr, n); 
   
-    for (int i=0; i<n; i++) 
+    for (int i = 0; i < n; i++) 
+    {
        std::cout << arr[i] << " "; 
+    }
+     
+    std::cout << "\nCount Sort: " << std::endl;
+    for (int i = 0; i < vcountsorted.size(); i++)
+    {
+        std::cout << vcountsorted[i] << " ";
+    }
+
     std::getchar();
+
     return 0;
 }
