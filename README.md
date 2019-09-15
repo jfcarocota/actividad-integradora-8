@@ -45,6 +45,10 @@ Este algoritmo es muy interesante porque no usa ninguna sentencia if, es decir, 
 
 ![image](https://user-images.githubusercontent.com/6539267/64917431-3b5a4e00-d745-11e9-8541-1953f60d340d.png)
 
+## Analisis
+
+![image](https://user-images.githubusercontent.com/6539267/64917478-87a58e00-d745-11e9-92db-a549a342d8f8.png)
+
 
 ## Referencias
 <p align="justify">
