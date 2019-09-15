@@ -45,10 +45,6 @@ Este algoritmo es muy interesante porque no usa ninguna sentencia if, es decir, 
 
 ![image](https://user-images.githubusercontent.com/6539267/64917431-3b5a4e00-d745-11e9-8541-1953f60d340d.png)
 
-## Analisis
-
-![image](https://user-images.githubusercontent.com/6539267/64917478-87a58e00-d745-11e9-92db-a549a342d8f8.png)
-
 ## Merge sort 
 
 <p align="justify">
@@ -58,6 +54,10 @@ El ordenamiento por mezcla es un algoritmo recursivo que divide continuamente un
 ![image](https://user-images.githubusercontent.com/6539267/64918155-41edc300-d74f-11e9-9100-f67764c38e28.png)
 
 ![image](https://user-images.githubusercontent.com/6539267/64918157-4e721b80-d74f-11e9-932f-4aa9c7ac07b8.png)
+
+## Analisis
+
+![image](https://user-images.githubusercontent.com/6539267/64917478-87a58e00-d745-11e9-92db-a549a342d8f8.png)
 
 ## Referencias
 <p align="justify">
