@@ -26,6 +26,8 @@ private:
     static void Merge(int[], int, int, int);
     static void StoreSorted(Node*, int[], int&); 
     static Node* Insert(Node*, int); 
+    static int GetMax(int[], int);
+    static void CountSort(int[], int, int);
 public:
     SortingMethods(/* args */);
     ~SortingMethods();
@@ -36,7 +38,8 @@ public:
     static const void BucketSort(float[], int); 
     static const std::vector<int> CountSort(std::vector<int>);
     static const void MergeSort(int[], int, int); 
-    static void TreeSort(int[], int) ;
+    static void TreeSort(int[], int);
+    static void Radixsort(int[], int); 
 };
 
 SortingMethods::SortingMethods(/* args */)
@@ -239,7 +242,6 @@ Node* SortingMethods::Insert(Node* node, int key)
     return node; 
 } 
   
-// This function sorts arr[0..n-1] using Tree Sort 
 void SortingMethods::TreeSort(int arr[], int n) 
 { 
     struct Node *root = NULL; 
@@ -255,3 +257,40 @@ void SortingMethods::TreeSort(int arr[], int n)
     SortingMethods::StoreSorted(root, arr, i); 
 } 
 
+int SortingMethods::GetMax(int arr[], int n) 
+{ 
+    int mx = arr[0]; 
+    for (int i = 1; i < n; i++) 
+        if (arr[i] > mx) 
+            mx = arr[i]; 
+    return mx; 
+} 
+  
+void SortingMethods::CountSort(int arr[], int n, int exp) 
+{ 
+    int output[n]; 
+    int i, count[10] = {0}; 
+  
+    for (i = 0; i < n; i++) 
+        count[ (arr[i]/exp)%10 ]++; 
+  
+    for (i = 1; i < 10; i++) 
+        count[i] += count[i - 1]; 
+  
+    for (i = n - 1; i >= 0; i--) 
+    { 
+        output[count[ (arr[i]/exp)%10 ] - 1] = arr[i]; 
+        count[ (arr[i]/exp)%10 ]--; 
+    } 
+  
+    for (i = 0; i < n; i++) 
+        arr[i] = output[i]; 
+} 
+  
+void SortingMethods::Radixsort(int arr[], int n) 
+{ 
+    int m = SortingMethods::GetMax(arr, n); 
+  
+    for (int exp = 1; m/exp > 0; exp *= 10) 
+        SortingMethods::CountSort(arr, n, exp); 
+} 
