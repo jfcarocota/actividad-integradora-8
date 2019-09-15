@@ -1,12 +1,12 @@
 ﻿# Actividad integradora 8
 
-# Bubble sort
+## Bubble sort
 
 Bubble Sort a menudo se enseña a programadores novatos en cursos introductorios de informática. Esto es lamentable, porque Bubble Sort no tiene características de valgan la pena en absoluto. Bubble Sort consiste en un simple doble for loop. La primera iteración del bucle for interno se mueve a través de la matriz de registros de abajo hacia arriba, comparando las teclas adyacentes. Si el valor de la clave indexada inferior es mayor que su vecino indexado superior, los dos valores se intercambian. Una vez que se encuentra el valor más pequeño, este proceso hará que "burbujee" hasta la parte superior de la matriz. La segunda pasada a través de la matriz repite este proceso. Sin embargo, como sabemos que el valor más pequeño alcanzó la parte superior de la matriz en la primera pasada, no es necesario comparar los dos elementos superiores en la segunda pasada. Del mismo modo, cada pasada sucesiva a través de la matriz compara elementos adyacentes, observando un valor menos que la pasada anterior. (2011, Shaffer).
 
 ![image](https://user-images.githubusercontent.com/6539267/64583614-7aa02d80-d346-11e9-8030-b55e3fb59f73.png)
 
-# Cocktail Sort o bubblesort bidireccional
+## Cocktail Sort o bubblesort bidireccional
 
 Cocktail Sort es una variación de Bubble Sort. El algoritmo de clasificación de burbujas siempre atraviesa elementos desde la izquierda y mueve el elemento más grande a su posición correcta en la primera iteración y el segundo más grande en la segunda iteración, y así sucesivamente. Cocktail Sort atraviesa una matriz dada en ambas direcciones alternativamente, por eso se llama bidireccional.
 La primera etapa recorre la matriz de izquierda a derecha, al igual que el Bubble Sort. Durante el ciclo, los elementos adyacentes se comparan y si el valor de la izquierda es mayor que el valor de la derecha, los valores se intercambian. Al final de la primera iteración, el mayor número residirá al final de la matriz.
@@ -16,7 +16,7 @@ La segunda etapa recorre la matriz en dirección opuesta, comenzando desde el el
 
 ![image](https://user-images.githubusercontent.com/6539267/64586471-37978780-d351-11e9-8143-b8d3f32b1573.png)
 
-# Insertion Sort
+## Insertion Sort
 
 El ordenamiento por inserción es un algoritmo basado en la comparación de elementos. Es estable y tiene una complejidad asintótica cuadrática O (n ^ {2}). La versión generalizada de este algoritmo es la ordenación de Shell, que es un ordenamiento de inserción con un incremento decreciente.
 Un elemento se ordena trivialmente.Elije el elemento junto a la secuencia ya ordenada y lo insérta en el lugar correcto: mueve cada elemento de la secuencia ya ordenada, que tiene un valor más alto que el elemento que se está ordenando, un lugar a la derecha, que coloca el elemento en el espacio (lugar correcto dentro de la secuencia). Mientras el conjunto contenga elementos desordenados, se volverpa al paso dos.
@@ -25,6 +25,12 @@ Un elemento se ordena trivialmente.Elije el elemento junto a la secuencia ya ord
 
 ![image](https://user-images.githubusercontent.com/6539267/64629676-815f8c80-d3a8-11e9-994a-8452bd3498f2.png)
 
+## Bucket sort u Ordenamiento por casilleros
 
-# Referencias
+El ordenamiento por casilleros (bucket sort en inglés) es un algoritmo de ordenamiento que distribuye todos los elementos  n ha ordenar entre un número n de casilleros. Cada casillero sólo puede contener los elementos que cumplan unas determinadas condiciones. Las condiciones deben ser excluyentes entre sí, para evitar que un elemento pueda ser clasificado en dos casilleros distintos. Después cada uno de esos casilleros se ordena uno por uno con otro algoritmo de ordenación (para que distinto según el casillero), o se aplica recursividad en este algoritmo para obtener casilleros con menos elementos. Se trata de una generalización del algoritmo Pigeonhole sort (GeeksforGeeks, 2015). Cuando los elementos a ordenar están uniformemente distribuidos la complejidad computacional de este algoritmo es de O(n). (Serna, 2010).
+
+![image](https://user-images.githubusercontent.com/6539267/64916950-f8957780-d73e-11e9-953e-095462d48d56.png)
+
+
+## Referencias
 Shaffer, Clifford A .. Estructuras de datos y análisis de algoritmos en C ++, tercera edición (Dover Books on Computer Science). Publicaciones de Dover. Edición de Kindle.
