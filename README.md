@@ -29,8 +29,8 @@ Un elemento se ordena trivialmente.Elije el elemento junto a la secuencia ya ord
 <p align="justify">
 El ordenamiento por casilleros (bucket sort en inglés) es un algoritmo de ordenamiento que distribuye todos los elementos  n ha ordenar entre un número n de casilleros. Cada casillero sólo puede contener los elementos que cumplan unas determinadas condiciones. Las condiciones deben ser excluyentes entre sí, para evitar que un elemento pueda ser clasificado en dos casilleros distintos. Después cada uno de esos casilleros se ordena uno por uno con otro algoritmo de ordenación (para que distinto según el casillero), o se aplica recursividad en este algoritmo para obtener casilleros con menos elementos. Se trata de una generalización del algoritmo Pigeonhole sort (GeeksforGeeks, 2015). Cuando los elementos a ordenar están uniformemente distribuidos la complejidad computacional de este algoritmo es de O(n). (Serna, 2010).
 <p>
-![image](https://user-images.githubusercontent.com/6539267/64916950-f8957780-d73e-11e9-953e-095462d48d56.png)
 
+![image](https://user-images.githubusercontent.com/6539267/64917073-ae14fa80-d740-11e9-9f17-c09706b6a66a.png)
 
 ## Referencias
 <p align="justify">
