@@ -8,32 +8,32 @@ int main()
     std::vector<int> vbubblesorted = SortingMethods::BubbleSort(v);
     std::vector<int> vcocktrailsorted = SortingMethods::CocktailSort(v);
     std::vector<int> vinsertionsorted = SortingMethods::InsertionSort(v);
-    const int *vbucketsorted = SortingMethods::BucketSort(fv);
+    float arr[] = {0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
 
 
     std::cout << "Bubble Sort: " << std::endl;
     for (int i = 0; i < vbubblesorted.size(); i++)
     {
-        std::cout << vbubblesorted[i] << std::endl;
+        std::cout << vbubblesorted[i] << " ";
     }
 
-    std::cout << "Cocktail Sort: " << std::endl;
+    std::cout << "\nCocktail Sort: " << std::endl;
     for (int i = 0; i < vcocktrailsorted.size(); i++)
     {
-        std::cout << vcocktrailsorted[i] << std::endl;
+        std::cout << vcocktrailsorted[i] << " ";
     }
     
-    std::cout << "Insertion Sort: " << std::endl;
+    std::cout << "\nInsertion Sort: " << std::endl;
     for (int i = 0; i < vinsertionsorted.size(); i++)
     {
-        std::cout << vinsertionsorted[i] << std::endl;
+        std::cout << vinsertionsorted[i] << " ";
     }
-    std::cout << "Bucket Sort: " << std::endl;
-    for (int i = 0; i < 9; i++)
-    {
-        std::cout << vbucketsorted[i] << std::endl;
-    }
-    
-    
+    std::cout << "\nBucket Sort: " << std::endl;
+    SortingMethods::BucketSort(arr, n); 
+  
+    for (int i=0; i<n; i++) 
+       std::cout << arr[i] << " "; 
     std::getchar();
+    return 0;
 }
