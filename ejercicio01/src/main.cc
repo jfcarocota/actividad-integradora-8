@@ -2,6 +2,9 @@
 #include "SortingMethods.hh"
 
 
+  
+
+
 int main()
 {
     std::vector<int> v = {7, 8, 5, 2, 4, 1, 9, 3, 6};
@@ -54,7 +57,14 @@ int main()
     {
         std::cout << arrv[i] << " ";
     }
-
+  
+    SortingMethods::TreeSort(arrv, n); 
+    std::cout << "\nBinary Tree Sort: " << std::endl;
+    for (int i=0; i < arrv_size; i++) 
+    {
+        std::cout << arrv[i] << " "; 
+    }
+    
     std::getchar();
 
     return 0;

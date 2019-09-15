@@ -4,11 +4,28 @@
 #include<utility>
 #include<algorithm>
 
+struct Node 
+{ 
+    int key; 
+    struct Node *left, *right; 
+}; 
+  
+// A utility function to create a new BST Node 
+struct Node *newNode(int item) 
+{ 
+    struct Node *temp = new Node; 
+    temp->key = item; 
+    temp->left = temp->right = NULL; 
+    return temp; 
+} 
+
 class SortingMethods
 {
 private:
     /* data */
     static void Merge(int[], int, int, int);
+    static void StoreSorted(Node*, int[], int&); 
+    static Node* Insert(Node*, int); 
 public:
     SortingMethods(/* args */);
     ~SortingMethods();
@@ -19,6 +36,7 @@ public:
     static const void BucketSort(float[], int); 
     static const std::vector<int> CountSort(std::vector<int>);
     static const void MergeSort(int[], int, int); 
+    static void TreeSort(int[], int) ;
 };
 
 SortingMethods::SortingMethods(/* args */)
@@ -194,3 +212,46 @@ const void SortingMethods::MergeSort(int arr[], int l, int r)
         SortingMethods::Merge(arr, l, m, r); 
     } 
 } 
+
+
+void SortingMethods::StoreSorted(Node *root, int arr[], int &i) 
+{ 
+    if (root != NULL) 
+    { 
+        SortingMethods::StoreSorted(root->left, arr, i); 
+        arr[i++] = root->key; 
+        SortingMethods::StoreSorted(root->right, arr, i); 
+    } 
+} 
+
+Node* SortingMethods::Insert(Node* node, int key) 
+{ 
+    /* If the tree is empty, return a new Node */
+    if (node == NULL) return newNode(key); 
+  
+    /* Otherwise, recur down the tree */
+    if (key < node->key) 
+        node->left  = SortingMethods::Insert(node->left, key); 
+    else if (key > node->key) 
+        node->right = SortingMethods::Insert(node->right, key); 
+  
+    /* return the (unchanged) Node pointer */
+    return node; 
+} 
+  
+// This function sorts arr[0..n-1] using Tree Sort 
+void SortingMethods::TreeSort(int arr[], int n) 
+{ 
+    struct Node *root = NULL; 
+  
+    // Construct the BST 
+    root = SortingMethods::Insert(root, arr[0]); 
+    for (int i=1; i<n; i++) 
+        SortingMethods::Insert(root, arr[i]); 
+  
+    // Store inoder traversal of the BST 
+    // in arr[] 
+    int i = 0; 
+    SortingMethods::StoreSorted(root, arr, i); 
+} 
+
