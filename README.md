@@ -35,6 +35,8 @@ El ordenamiento por casilleros (bucket sort en inglés) es un algoritmo de orden
 
 ![image](https://user-images.githubusercontent.com/6539267/64917073-ae14fa80-d740-11e9-9f17-c09706b6a66a.png)
 
+## Count sort
+
 <p align="justify">
 Este algoritmo es muy interesante porque no usa ninguna sentencia if, es decir, no hay ninguna condición, a excepción de los bucles. El algoritmo funciona mejor con una lista larga, de un solo elemento simple: no hay structs, y de números repetitivos. Es mejor que los números no se separen mucho entre sí; por ejemplo, el valor máximo sea de 10, y el mínimo de 1, aunque tengamos 10.000 entradas (o elementos). La desventaja de este algoritmo es la necesidad de almacenar muchos datos en memoria.
 <p>
